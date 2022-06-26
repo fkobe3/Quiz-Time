@@ -8,20 +8,51 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
+
 <header>
     Take the Quiz! See how YOU stack up against other coders!
-    <h3>View High Scores</h3>
-    <p> Timer: <span id="countdown">200s</span> </p>
+    <h3>
+      <a id="scores"href="#view-high-scores">View High Scores</a>
+    </h3>
+    <p id="timer"> Time Left: <span id="countdown"></span> </p>
 </header>
-<nav>
-    <button id="start-quiz" onclick="timer()">Start Quiz</button>
-</nav>
-<button id="a-button" onclick="answer(a)">A</button>
-<button id="b-button" onclick="answer(b)">B</button>
-<button id="c-button" onclick="answer(c)">C</button>
-<button id="d-button" onclick="answer(d)">D</button>
 
+<article>
+    <button id="start-quiz" onclick="Timer()"><span>Start Quiz?</span></button>
+</article>
 
-   <script src="/./assets/js/script.js"></script> 
+<section>
+    <div>
+    <p class="questions" id="questions"></p>
+    <div>
+    <button id="a-button" onclick="answer(a)" class="choices">A</button>
+    <button id="b-button" onclick="answer(b)" class="choices">B</button>
+    <button id="c-button" onclick="answer(c)" class="choices">C</button>
+    <button id="d-button" onclick="answer(d)" class="choices">D</button>
+    </div>
+</div>
+<p class="right-or-wrong" id="right-or-wrong-q"></p>
+</section>
+<id>
+<h1>Congratulations! You finished it! Now let's see how you did!</h1>
+<p> Your <strong>Final</strong> score is: <span id="final-score"></span></p>
+<footer>
+<form class="high-score-submission" id="high-score-submission">
+    <p>Enter Initials:</p>
+    <input type="text" placeholder="Initials Here" name="initials-here" class="input-initials" id="input-initials"/>
+    <button type="submit" class="button" id="submission-button">Submit</button>
+</form>
+</footer>
+<p class="right-or-wrong" id="right-or-wrong-f"></p>
+</id>
+<div>
+<h1>High Scores</h1>
+<ol class="high-score-list" id="high-score-list"></ol>
+<div>
+<button id="go-back" class="button"><span>Go Back?</span></button>
+<button id="clear-hs" class="button">Clear High Scores</button>
+</div>
+</div>
+   <script src="./assets/js/script.js"></script> 
 </body>
 </html>

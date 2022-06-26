@@ -5,8 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Time</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
-    
+<header>
+    Take the Quiz! See how YOU stack up against other coders!
+    <h3>View High Scores</h3>
+    <p> Timer: <span id="countdown">200s</span> </p>
+</header>
+<nav>
+    <button id="start-quiz" onclick="timer()">Start Quiz</button>
+</nav>
+<button id="a-button" onclick="answer(a)">A</button>
+<button id="b-button" onclick="answer(b)">B</button>
+<button id="c-button" onclick="answer(c)">C</button>
+<button id="d-button" onclick="answer(d)">D</button>
+
+
+   <script src="/./assets/js/script.js"></script> 
 </body>
 </html>

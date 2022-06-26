@@ -65,3 +65,17 @@ var control = 0
 var currentscore = {initials: "", score: 0};
 var highscores = [];
 var hsindex = 0;
+
+var startquizbutton = document.querySelector("#start-quiz");
+var choicesbutton = document.querySelector ("#choices");
+var initialsform = document.querySelector ("#high-score-submission");
+var backbutton = document.querySelector ("#go-back");
+var clearbutton = document.querySelector ("#clear-hs");
+var olhslist = document.querySelector ("#high-score-list");
+var seehsbutton = document.querySelector ("#view-high-scores");
+
+var main = document.querySelector ("main");
+var top = document.querySelector ("header");
+var questions = main.removeChild(document.querySelector ("article"));
+var done = main.removeChild(document.querySelector ("section"));
+var hs = main.removeChild(document.querySelector ("#hs"));

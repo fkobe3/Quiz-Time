@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
-
+<main>
 <header>
     Take the Quiz! See how YOU stack up against other coders!
     <h3>
@@ -24,7 +24,7 @@
 <section>
     <div>
     <p class="questions" id="questions"></p>
-    <div>
+    <div class="choices" id="choices">
     <button id="a-button" onclick="answer(a)" class="choices">A</button>
     <button id="b-button" onclick="answer(b)" class="choices">B</button>
     <button id="c-button" onclick="answer(c)" class="choices">C</button>
@@ -45,7 +45,7 @@
 </footer>
 <p class="right-or-wrong" id="right-or-wrong-f"></p>
 </id>
-<div>
+<div class="hs" id="hs">
 <h1>High Scores</h1>
 <ol class="high-score-list" id="high-score-list"></ol>
 <div>
@@ -53,6 +53,7 @@
 <button id="clear-hs" class="button">Clear High Scores</button>
 </div>
 </div>
+</main>
    <script src="./assets/js/script.js"></script> 
 </body>
 </html>

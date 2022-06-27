@@ -75,3 +75,50 @@ var top = document.querySelector ("header");
 var questions = main.removeChild(document.querySelector ("article"));
 var done = main.removeChild(document.querySelector ("section"));
 var hs = main.removeChild(document.querySelector ("#hs"));
+
+var processhs = function () {
+    clearInterval (control);
+    while (main.firstChild) {
+        main.removeChild(main.firstChild);
+    }
+    main.appendChild (seehsbutton);
+    highscores = [];
+    storedhs = localStorage.setItem(key);
+    if (storedhs) {
+        highscores =localStorage.getItem (key);
+}
+displayhighscores();
+};
+
+var processclear =function () {
+    clearhs();
+    localStorage.setItem(key, highscores);
+};
+
+var clearhs = function () {
+    while (olhslist.firstChild) {
+        olhslist.removeChild(olhslist.firstChild);
+    }
+    highscores.length = 0;
+};
+
+var goback =function () {
+    main.removeChild(hs);
+    main.appendChild(top);
+    main.appendChild(questions);
+    timecount = 0
+    document.querySelector("#timer").innerHTML = "";
+    clearhs();
+};
+
+var displayhs =function () {
+    highscores.sort((a,b)=> (a.score > b.score ? -1: 1));
+    var highscoreslength =highscores.length;
+    for (var i = 0; i < highscoreslength; ++i) {
+        var liElement = document.createElement("li");
+        liElement.className = "hs-list";
+        liElement.innerHTML = highscores[i].initials + " - " + highscores[i].score;
+        olhslist.appendChild(liElement);
+        
+    }
+};

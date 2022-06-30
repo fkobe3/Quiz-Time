@@ -1,4 +1,3 @@
-alert('Hello! Good luck and enjoy!')
 alert('200 seconds to answer 10 questions once you click Start...How will you stack up?')
 alert( 'Wrong answers will remove 30 seconds. Be quick, but be careful, as your final time is also your final score.' )
 
